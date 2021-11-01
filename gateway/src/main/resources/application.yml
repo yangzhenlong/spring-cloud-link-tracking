@@ -1,0 +1,24 @@
+server:
+  port: 8080
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          # 对注册中心的服务，按照服务名称生成动态路由。所以可以用 /client-app 访问，也可以用下面配置的自定义路由 /client 访问
+          enabled: true
+          # 服务名称全部转为小写
+          lowerCaseServiceId: true
+      routes:
+        - id: server-app
+          uri: lb://server-app
+          predicates:
+            - Path=/server/**
+          filters:
+            - StripPrefix=1
+        - id: client-app
+          uri: lb://client-app
+          predicates:
+            - Path=/client/**
+          filters:
+            - StripPrefix=1
