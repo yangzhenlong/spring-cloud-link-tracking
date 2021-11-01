@@ -5,6 +5,8 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 spring:
+  application:
+    name: gateway
   cloud:
     gateway:
       discovery:
@@ -26,3 +28,5 @@ spring:
             - Path=/client/**
           filters:
             - StripPrefix=1
+  zipkin:
+    base-url: http://localhost:9411
