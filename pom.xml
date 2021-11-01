@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>spring-cloud-link-tracking</groupId>
+    <artifactId>dev.yzl.springcloud.track</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <baas.version>0.1.0</baas.version>
+        <spring.cloud.version>Hoxton.SR8</spring.cloud.version>
+        <spring-boot.version>2.3.2.RELEASE</spring-boot.version>
+        <dubbo.version>2.7.8</dubbo.version>
+        <sentinel.version>1.8.0</sentinel.version>
+        <nacos.version>1.4.1</nacos.version>
+        <mapstruct.version>1.4.2.Final</mapstruct.version>
+        <jackson.version>2.12.2</jackson.version>
+        <junit.version>4.13.2</junit.version>
+        <common-lang3.version>3.12.0</common-lang3.version>
+        <lombok.version>1.18.18</lombok.version>
+        <fabric8.version>5.1.1</fabric8.version>
+        <hutool.version>5.5.2</hutool.version>
+        <supervisory.version>0.1.0</supervisory.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring.cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
